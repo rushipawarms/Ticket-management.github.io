@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.tool-cont
+{
+background-color: #4b4b4b;
+height: 6rem;
+width :100%;
+display: flex;
+align-items: center;
+
+}
+.col-cont
+{
+background-color: #3d3d3d;
+height: 3rem;
+width:20rem;
+margin-left: 50px;
+border-radius: 5px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.color{
+    height: 20px;
+    width: 3rem;
+    background-color: red;
+    border-radius: 2px;
+    
+}
+.lightpink{
+background-color: red;
+}
+.lightblue{
+background-color: blue;
+}
+.lightgreen{
+background-color: green;
+}
+.black{
+background-color: black;
+}
+.action-button{
+    background-color: #3d3d3d;
+height: 3rem;
+width:10rem;
+margin-left: 50px;
+border-radius: 5px;
+display: flex;
+
+
+}
+.action-button > *{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 2rem;
+}
+.action-button > *:hover{
+    background-color: lightgray
+}
+.add-button{
+
+}
+.remove-button
+{
+
+}
+.modal
+{
+    height: 50vh;
+    width: 40vw;
+    
+    position: absolute;
+    top:25vh;
+    left:32vw;
+    display: none;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    
+    
+  
+    
+
+}
+.text-area-cont{
+  
+    width: 75%;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 3rem;
+    font-size: 1.5rem;
+    background-color: #84817a
+
+}
+.priority-col-cont{
+   
+    background-color: #4b4b4b;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.priority-col{
+    height: 12%;
+    width: 55%;
+    border-radius: 5px;
+}
+.main-cont{
+    
+    display: flex;
+    padding: 1rem;
+    gap:2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ticket-cont{
+height:14rem;
+width: 17rem;
+background-color: lightgrey;
+border-radius: 5px;
+box-shadow: 10px 10px 5px #aaaaaa;
+
+
+}
+.ticket-col{
+    height: 1.5rem;
+    background-color: lightpink;
+}
+.ticket-id{
+    height: 1.5rem;
+    background-color: lightcyan;
+    padding: 0.8rem;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.ticket-area{
+    padding: 0.8rem;
+    color: black;
+
+}
+.border{
+    border: solid 2px lightgrey;
+}
