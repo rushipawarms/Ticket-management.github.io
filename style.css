@@ -20,7 +20,7 @@ align-items: center;
 {
 background-color: #3d3d3d;
 height: 3rem;
-width:20rem;
+width:25rem;
 margin-left: 50px;
 border-radius: 5px;
 display: flex;
@@ -34,11 +34,22 @@ justify-content: space-around;
     border-radius: 2px;
     
 }
+.all-ticke{
+    height: 25px;
+    width: 4.5rem;
+    background-color: #4b4b4b;
+    border-radius: 2px;
+    color:white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius:5px ;
+}
 .lightpink{
-background-color: red;
+background-color: lightpink;
 }
 .lightblue{
-background-color: blue;
+background-color: lightblue;
 }
 .lightgreen{
 background-color: green;
@@ -126,32 +137,43 @@ display: flex;
     justify-content: center;
 }
 .ticket-cont{
-height:14rem;
+height:15rem;
 width: 17rem;
 background-color: lightgrey;
-border-radius: 5px;
 box-shadow: 10px 10px 5px #aaaaaa;
+border-radius: 5px;
 
 
 }
 .ticket-col{
-    height: 1.5rem;
-    background-color: lightpink;
+    height: 2rem;
+   
 }
 .ticket-id{
-    height: 1.5rem;
-    background-color: lightcyan;
-    padding: 0.8rem;
-    font-size: 17px;
+    height: 2rem;
+    background-color: lightgrey;
+    padding: 0.4rem;
+    /* font-size: 15px; */
     font-weight: bold;
     display: flex;
     align-items: center;
+    border-bottom: solid 1px gray
 }
 .ticket-area{
-    padding: 0.8rem;
-    color: black;
-
+    padding: 0.4rem;
+    outline: none;
+    height:8.5rem
 }
 .border{
-    border: solid 2px lightgrey;
+    border: solid 4px #fff200;
 }
+.ticket-lock{
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+   padding-right: 0.5rem;
+   color: #84817a;
+  
+
+} 
