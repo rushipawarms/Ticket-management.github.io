@@ -90,12 +90,10 @@ removebtn.addEventListener("click",function(){
     }
     removalflag=!removalflag;
 })
-modalC.addEventListener("keydown",(e)=>{
+let addT=document.querySelector(".add");
+addT.addEventListener("click",(e)=>{
    
-    let key=e.key;
-    if(key=="+")
-    {
-        
+     
         createtask(modalcolor, textcont.value);
          modalC.style.display="none";
         textcont.value="";
@@ -105,7 +103,7 @@ modalC.addEventListener("keydown",(e)=>{
         }
         Allprioritycolor[Allprioritycolor.length-1].classList.add("border");
         modalcolor= Allprioritycolor[Allprioritycolor.length-1].classList[0];
-    }
+    
 })
 
 function createtask(modalcolor,text,ticketID){

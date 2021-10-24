@@ -122,6 +122,15 @@ display: flex;
     align-items: center;
     
 }
+.add{
+    height: 12%;
+    width: 55%;
+    background-color: wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
 .priority-col{
     height: 12%;
     width: 55%;
@@ -176,6 +185,8 @@ border-radius: 5px;
   
 
 } 
+
+
 @media screen and (min-width:425px) and (max-width:768px)
 {
     .modal{
