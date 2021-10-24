@@ -93,7 +93,7 @@ removebtn.addEventListener("click",function(){
 modalC.addEventListener("keydown",(e)=>{
    
     let key=e.key;
-    if(key=="+")
+    if(key=="Enter")
     {
         
         createtask(modalcolor, textcont.value);
