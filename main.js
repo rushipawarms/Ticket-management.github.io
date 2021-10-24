@@ -55,7 +55,7 @@ for(let i=0;i<prioritycolor.length;i++)
         }
     })
 }
-        let allticket=document.querySelector(".all-ticke")
+        let allticket=document.querySelector(".all-ticket")
              allticket.addEventListener("click", (e) => {
                 let prevoiusfilter=document.querySelectorAll(".ticket-cont");
                 for(let i=0;i<prevoiusfilter.length;i++)

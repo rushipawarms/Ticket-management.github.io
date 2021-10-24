@@ -34,7 +34,7 @@ justify-content: space-around;
     border-radius: 2px;
     
 }
-.all-ticke{
+.all-ticket{
     height: 25px;
     width: 4.5rem;
     background-color: #4b4b4b;
@@ -89,7 +89,6 @@ display: flex;
 {
     height: 50vh;
     width: 40vw;
-    
     position: absolute;
     top:25vh;
     left:32vw;
@@ -177,3 +176,52 @@ border-radius: 5px;
   
 
 } 
+@media screen and (min-width:425px) and (max-width:768px)
+{
+    .modal{
+        height: 40vh;
+        width: 41vw;
+    }
+   
+}
+
+@media screen and (max-width:426px)
+{
+    .modal{
+        height: 40vh;
+        width: 70vw;
+        left: 4.5rem;
+        top:14rem;
+    }
+    .action-button{
+    
+    height: 2rem;
+    width:6rem;
+    margin-left: 10px;
+    
+    }
+    .col-cont
+{
+
+height: 2rem;
+width:20rem;
+margin-left: 5px;
+
+}
+.color{
+    width: 2.5rem;
+    height: 15px;
+}
+   .all-ticket{
+    height: 15px;
+    width: 4rem;
+    font-size: 12px;
+   } 
+   .tool-cont
+{
+
+height: 4rem;
+width :100%;
+
+}
+}
