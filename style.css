@@ -75,9 +75,9 @@ display: flex;
     color: aliceblue;
     font-size: 2rem;
 }
-.action-button > *:hover{
+/* .action-button > *:hover{
     background-color: lightgray
-}
+} */
 .add-button{
 
 }

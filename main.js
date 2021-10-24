@@ -11,6 +11,14 @@ let prioritycolor=document.querySelectorAll(".color");
 let ticketArray=[];
 let add=false;
 let removalflag=false;
+if(localStorage.getItem("Tickets"))
+{
+    ticketArray=JSON.parse( localStorage.getItem("Tickets"));
+    for(let i=0;i<ticketArray.length;i++)
+    {
+        createtask(ticketArray[i].modalcolor,ticketArray[i].text,ticketArray[i].ticketID);
+    }
+}
 for(let i=0;i<Allprioritycolor.length;i++){
     Allprioritycolor[i].addEventListener("click",function(e){
         for(let j=0;j<Allprioritycolor.length;j++)
@@ -74,9 +82,13 @@ addbtn.addEventListener("click",function(){
     }
 })
 removebtn.addEventListener("click",function(){
-    console.log(removalflag);
+    if(!removalflag){
+        removebtn.style.color="red";
+    }
+    else{
+        removebtn.style.color="lightgrey";
+    }
     removalflag=!removalflag;
-    console.log(removalflag);
 })
 modalC.addEventListener("keydown",(e)=>{
    
@@ -111,34 +123,39 @@ function createtask(modalcolor,text,ticketID){
     if(!ticketID)
     {
         ticketArray.push({modalcolor,text,ticketID:id});
+        localStorage.setItem("Tickets",JSON.stringify(ticketArray));
     }
   
-    handleRemoval(ticketcont);
-    handlelock(ticketcont);
-    handlecolor(ticketcont);
+    handleRemoval(ticketcont,id);
+    handlelock(ticketcont,id);
+    handlecolor(ticketcont,id);
 }
-function handlelock(ticket)
+function handlelock(ticket,id)
 {
     let tickLOCK=ticket.querySelector(".fas");
     let tickText=ticket.querySelector(".ticket-area");
     tickLOCK.addEventListener("click", function(){
+        let idx=getidxfrominpurarray(id);
         if(tickLOCK.classList.contains("fa-lock")){
             tickLOCK.classList.remove("fa-lock");
             tickLOCK.classList.add("fa-lock-open");
             tickText.setAttribute("contenteditable" ,"true");
+            
         }
         else{
             tickLOCK.classList.remove("fa-lock-open");
             tickLOCK.classList.add("fa-lock");
             tickText.setAttribute("contenteditable" ,"false");
         }
+        ticketArray[idx].text=tickText.innerText;
+        localStorage.setItem("Tickets",JSON.stringify(ticketArray));
     })
 }
-function handlecolor(ticket)
+function handlecolor(ticket,id)
 {
     let ticketcolor=ticket.querySelector(".ticket-col");
     ticketcolor.addEventListener("click",function(){
-       
+       let idx=getidxfrominpurarray(id);
         let currentTcolor=ticketcolor.classList[1];
         let CCidx;
         for(let i=0;i<priorityColors.length;i++)
@@ -154,17 +171,31 @@ function handlecolor(ticket)
         changeColor=priorityColors[changeidx];
         ticketcolor.classList.remove(currentTcolor);
         ticketcolor.classList.add(changeColor);
+        ticketArray[idx].modalcolor=changeColor;
+        localStorage.setItem("Tickets",JSON.stringify(ticketArray));
     })
   
 
 }
-
-function handleRemoval(ticket)
+function getidxfrominpurarray(id)
+{
+    for(let i=0;i<ticketArray.length;i++)
+    {
+        if(ticketArray[i].ticketID==id)
+        {
+            return i;
+        }
+    }
+}
+function handleRemoval(ticket,id)
 {
     ticket.addEventListener("click",function(){
+        let idx=getidxfrominpurarray(id);
         if(removalflag)
         {
             ticket.remove();
+            ticketArray.splice(idx,1);
+            localStorage.setItem("Tickets",JSON.stringify(ticketArray));
         }
     })
     
